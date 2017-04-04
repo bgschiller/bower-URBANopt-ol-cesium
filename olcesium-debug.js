@@ -1,7 +1,5 @@
 // Ol-Cesium. See https://github.com/openlayers/ol-cesium/
 // License: https://github.com/openlayers/ol-cesium/blob/master/LICENSE
-// Version: v1.24.3-18-g9fa667a
-
 var CLOSURE_NO_DEPS = true;
 // Copyright 2006 The Closure Library Authors. All Rights Reserved.
 //
@@ -28886,15 +28884,18 @@ olcs.FeatureConverter.prototype.olPolygonGeometryToCesium = function(layer, feat
       }
     }
 
+    const height = feature.getProperties().height || 0;
     fillGeometry = new Cesium.PolygonGeometry({
       // always update Cesium externs before adding a property
       polygonHierarchy,
+      extrudedHeight: height,
       perPositionHeight: true
     });
 
     outlineGeometry = new Cesium.PolygonOutlineGeometry({
       // always update Cesium externs before adding a property
       polygonHierarchy: hierarchy,
+      extrudedHeight: height,
       perPositionHeight: true
     });
   }
