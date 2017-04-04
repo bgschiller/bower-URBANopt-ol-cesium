@@ -1,0 +1,12 @@
+{
+  "name": "urbanopt-ol-cesium",
+  "main": [
+    "ol.css",
+	"Cesium/Cesium.js",
+	"olcesium.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NREL/URBANopt-ol-cesium.git"
+  }
+}
